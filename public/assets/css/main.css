@@ -3674,8 +3674,8 @@
 	.circle{
 		margin: 10px 20px;
 		display: inline-block;
-		width: 105px;
-		height: 105px;
+		width: 120px;
+		height: 120px;
 		vertical-align: middle;
 		border:1px solid rgba(255,255,255,.8);
 		border-radius: 100px;
@@ -3693,6 +3693,12 @@
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
+		background-color:#29B473;
+		border-radius: 20px;
+		moz-transition: all .5s ease;
+		-webkit-transition: all .5s ease;
+		-ms-transition: all .5s ease;
+		transition: all .5s ease;
 
 	}
 	.circle p{
@@ -3724,8 +3730,8 @@
 		}
 
 		#banner p {
-			color: rgba(255, 255, 255, 0.65);
-			font-size: 1.5em !important;
+			color: rgba(255, 255, 255, 0.8);
+			font-size: 1.5em;
 		}
 
 		.circle >p{
@@ -3809,6 +3815,9 @@
 				#banner .button {
 					width: 100%;
 				}
+				.circle{
+				width: 100px;
+				height: 100px;}
 
 		}
 
@@ -3878,4 +3887,3 @@
 			#footer {
 				padding: 3em 0 1em 0;
 			}
-
