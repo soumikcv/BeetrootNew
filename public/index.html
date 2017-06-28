@@ -14,8 +14,11 @@
 
 		<!-- Header -->
 			<header id="header">
-				<h1><a href="#"><img style="height: 45px;padding-top: 5px;" src="img/Logo.svg"></a></h1>
-				<a href="#menu">Menu</a>
+				<h1><a href="#"><img id="logo" src="img/Logo.svg"></a></h1>
+				<a id="mobile" href="#menu">Menu</a>
+				<a id="web" class="scrolly" href="#work">Work</a>
+				<a id="web" class="scrolly" href="#service">Services</a>
+				<a id="web" class="scrolly" href="#footer">Contact</a>
 			</header>
 
 		<!-- Nav -->
@@ -38,7 +41,11 @@
 						<header>
 							<h1>We Are Beetroot</h1>
 							<p>Beetroot creates Motion graphics, Corporate videos, 2D/3D Animations,<br> provides UX consulting, Designs brands, Social Media Contents, Application and more.</p>
+							<div class="circle"><h3>Dubai</h3></div>
+							<div class="circle"><h3>Kochi</h3></div>
+							<div class="circle"><h3>Lisbon</h3></div>
 						</header>
+						<br>
 						<a href="#main" class="button big alt scrolly">Work With us</a>
 					</div>
 
@@ -504,7 +511,7 @@
 				</section>
 
 			<!-- Three -->
-				<section class="wrapper ">
+				<section class="wrapper style1">
 					<div class="inner">
 						<header id="service" class="align-center">
 							<h2>Expertise</h2>
@@ -669,6 +676,39 @@
 					    }
 					  ]
 					});
+				$('.circle').hover(
+					    function() {
+					        var $this = $(this)[0].innerHTML;
+					        if($this=="<h3>Dubai</h3>")
+					        	{
+					        		$(this)[0].innerHTML="<p>+971 50 360 4243</p>"
+					        	}
+					        else if($this=="<h3>Kochi</h3>")
+					        	{
+					        		$(this)[0].innerHTML="<p style=font-size:14px;>+91 80895 15554</p>"
+					        	}
+					        else if($this=="<h3>Lisbon</h3>")
+					        	{
+					        		$(this)[0].innerHTML="<p style=font-size:14px;>+351 937 155 845</p>"
+					        	}
+					       
+					    },
+					    function() {
+					    	var $this = $(this)[0].innerHTML;
+					        if($this=="<p>+971 50 360 4243</p>")
+					        	{
+					        		$(this)[0].innerHTML="<h3>Dubai</h3>"
+					        	}
+					      	else if($this=="<p style=font-size:14px;>+91 80895 15554</p>")
+					        	{
+					        		$(this)[0].innerHTML="<h3>Kochi</h3>"
+					        	}
+					        else if($this=="<p style=font-size:14px;>+351 937 155 845</p>")
+					        	{
+					        		$(this)[0].innerHTML="<h3>Lisbon</h3>"
+					        	}
+					    }
+					);
 		
 			</script>
 	</body>
