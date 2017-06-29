@@ -3659,7 +3659,7 @@
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
-		background-color: #29B473;
+		background-color: white;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -3677,7 +3677,7 @@
 		width: 120px;
 		height: 120px;
 		vertical-align: middle;
-		border:1px solid rgba(255,255,255,.8);
+		border:1px solid #062038;
 		border-radius: 100px;
 		moz-transition: all .5s ease;
 		-webkit-transition: all .5s ease;
@@ -3688,12 +3688,12 @@
 		background-color: rgba(255,255,255,.1);
 	}
 	.circle h3{
-		color: rgba(255,255,255,.9);
+		color: #062038;
 		margin:auto;
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
-		background-color:#29B473;
+		background-color:transparent;
 		border-radius: 20px;
 		moz-transition: all .5s ease;
 		-webkit-transition: all .5s ease;
@@ -3704,7 +3704,7 @@
 	.circle p{
 		position: relative;
 		font-size: 1em;
-		color: rgba(255,255,255,1);
+		color: #8a1933;
 		top: 50%;
 		transform: translateY(-50%);
 
@@ -3725,19 +3725,20 @@
 		}
 
 		#banner h1 {
+			color: #418d6a;
 			font-size: 4em;
 			margin-bottom: .25em;
 		}
 
 		#banner p {
-			color: rgba(255, 255, 255, 0.8);
+			color: #062038;
 			font-size: 1.5em;
 		}
 
 		.circle >p{
 		position: relative;
 		font-size: 1em;
-		color: rgba(255,255,255,1);
+		color: #418d6a;
 		top: 50%;
 		transform: translateY(-50%);
 
@@ -3768,7 +3769,7 @@
 			transition-delay: 1.25s;
 			content: '';
 			display: block;
-			background-color: #29B473;
+			background-color: white;
 			height: 100%;
 			left: 0;
 			opacity: 0.45;
