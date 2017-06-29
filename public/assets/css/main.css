@@ -2406,7 +2406,7 @@
 		.image.right {
 			float: right;
 			margin: 0 0 1em 1.5em;
-			top: 0.25em;
+			top: 0.5em;
 		}
 
 		.image.fit {
@@ -2432,6 +2432,21 @@
 	.video-wrapper {
 		position: relative;
 		padding-bottom: 56.25%;
+
+	@media screen and (max-width: 480px) {
+			.image.right {
+			display: block;
+			margin: 0 0 2em 0;
+			width: 100%;
+		}
+		image.left {
+			display: block;
+			margin: 0 0 2em 0;
+			width: 100%;
+		}
+
+	}
+
 	/* 16:9 */
 
 		padding-top: 25px;
@@ -2664,22 +2679,23 @@
 	}
 
 		ul.tab-list li a {
-			background: rgba(255, 255, 255, 0.075);
+			background: rgba(255, 255, 255, 0.6);
 			border-radius: 4px;
-			color: rgba(255, 255, 255, 0.5) !important;
+			color: rgba(0, 0, 0, 0.8) !important;
 			margin-bottom: .5em;
 			padding: .5em 1em;
 			display: inline-block;
 			width: 100%;
+			box-shadow: 1px 3px 10px rgba(0,0,0,.3);
 		}
 
 			ul.tab-list li a.active {
-				background: #aa14cc;
+				background: #29B473;
 				color: #fff !important;
 			}
 
 			ul.tab-list li a:hover {
-				background: #693dcc;
+				background: #29B473;
 				color: #fff !important;
 			}
 
@@ -2787,6 +2803,7 @@
 	.wrapper {
 		padding: 6em 0 4em 0;
 		position: relative;
+		box-shadow: 10px 3px 10px rgba(0,0,0,.5)
 	}
 
 		.wrapper:before {
@@ -2809,6 +2826,7 @@
 			width: 80em;
 			position: relative;
 			z-index: 99;
+
 		}
 
 		.wrapper header {
@@ -2824,8 +2842,9 @@
 			}
 
 		.wrapper.style1 {
-			background-color: #062038;
-			color: #c1c7cd;
+			background-color: rgb(252,252,252);
+			color: black;
+			box-shadow: 5px 10px 10px rgba(0,0,0,.5);
 		}
 
 			.wrapper.style1 input, .wrapper.style1 select, .wrapper.style1 textarea {
@@ -2833,7 +2852,7 @@
 			}
 
 			.wrapper.style1 a {
-				color: #ffffff;
+				color: #7f878e;
 			}
 
 				.wrapper.style1 a:hover {
@@ -2845,7 +2864,7 @@
 			}
 
 			.wrapper.style1 h1, .wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6 {
-				color: #ffffff;
+				color: #262626;
 			}
 
 			.wrapper.style1 blockquote {
@@ -2862,15 +2881,19 @@
 			}
 
 			.wrapper.style1 .box {
-				border-color: rgba(255, 255, 255, 0.15);
+				border-color: rgba(0, 0, 0, 0.15);
+				box-shadow: 5px 10px 10px rgba(226,226,226,1);
+
 			}
+
+			.wrapper.style1 .video{box-shadow: 5px 10px 10px rgba(226,226,226,1);}
 
 			.wrapper.style1 input[type="submit"],
 			.wrapper.style1 input[type="reset"],
 			.wrapper.style1 input[type="button"],
 			.wrapper.style1 button,
 			.wrapper.style1 .button {
-				background-color: #041625;
+				background-color: transparent;
 				color: #ffffff !important;
 			}
 
@@ -2879,7 +2902,7 @@
 				.wrapper.style1 input[type="button"]:hover,
 				.wrapper.style1 button:hover,
 				.wrapper.style1 .button:hover {
-					background-color: #06243c;
+					background-color: transparent;
 				}
 
 				.wrapper.style1 input[type="submit"]:active,
@@ -2887,7 +2910,7 @@
 				.wrapper.style1 input[type="button"]:active,
 				.wrapper.style1 button:active,
 				.wrapper.style1 .button:active {
-					background-color: #02080e;
+					background-color: transparent;
 				}
 
 				.wrapper.style1 input[type="submit"].alt,
@@ -3008,7 +3031,7 @@
 			}
 
 			.wrapper.style1 header p {
-				color: #9ba6af;
+				color: #4c4c4c;
 			}
 
 			.wrapper.style1 table tbody tr {
@@ -3036,7 +3059,7 @@
 			}
 
 		.wrapper.style2 {
-			background-color: #041625;
+			background-color: #d6d6d6;
 			color: #c0c5c9;
 		}
 
@@ -3053,11 +3076,11 @@
 				}
 
 			.wrapper.style2 strong, .wrapper.style2 b {
-				color: #ffffff;
+				color: black;
 			}
 
 			.wrapper.style2 h1, .wrapper.style2 h2, .wrapper.style2 h3, .wrapper.style2 h4, .wrapper.style2 h5, .wrapper.style2 h6 {
-				color: #ffffff;
+				color: #1c1c1c;
 			}
 
 			.wrapper.style2 blockquote {
@@ -3220,7 +3243,7 @@
 			}
 
 			.wrapper.style2 header p {
-				color: #9ba2a8;
+				color: #5a5d60;
 			}
 
 			.wrapper.style2 table tbody tr {
@@ -3274,7 +3297,7 @@
 /* Video */
 
 	.video {
-		background: rgba(255, 255, 255, 0.075);
+		background: rgba(155, 166, 175,1)
 		border-radius: 4px;
 		margin: 0 0 1em 0;
 		overflow: hidden;
