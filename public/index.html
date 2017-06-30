@@ -16,6 +16,7 @@
 			<header id="header">
 				<h1><a href="#"><img id="logo" src="img/Logo.svg"></a></h1>
 				<a id="mobile" href="#menu">Menu</a>
+				<a id="web0" class="web scrolly" style="text-align: center;line-height: 36px;" href="#banner">Home</a>
 				<a id="web1" class="web scrolly" style="text-align: center;line-height: 36px;" href="#work">Work</a>
 				<a id="web2" class="web scrolly" style="text-align: center;line-height: 36px;" href="#service">Services</a>
 				<a id="web3" class="web scrolly" style="text-align: center;line-height: 36px;" href="#footer">Contact</a>
@@ -48,7 +49,7 @@
 						<br>
 						<a href="#main" class="button big alt scrolly">Work With us</a>
 						<br><br>
-						<div class="icon-top" style="  position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto;width: 100px">
+						<div class="icon-top" style=" position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto;width: 100px">
 						 <span style="color: white;font-size: 22px;">Find us on</span><br>
 							<a href="https://www.facebook.com/beetroot.ae" target="_blank" class="icon fa-facebook" style="font-size: 20px; margin:0 10px; color: white;"><span class="label">Facebook</span></a>
 							<a href="https://www.linkedin.com/company-beta/6589093/" target="_blank" class="icon fa-linkedin" style="font-size: 20px; margin:0 10px; color: white;"><span class="label">LinkedIn</span></a>
@@ -64,7 +65,7 @@
 				<section class="wrapper style1">
 
 					<div class="inner">
-													<header class="align-center">
+					<header class="align-center">
 							<h2>Success story</h2>
 							<p>Beetroot helped STS, an international school to create a communication design strategy which is engaging and effective for both parents and children. Right use of visual story telling is a proven way of conveying ideas in a memorable way.</p>
 						</header>
@@ -1126,13 +1127,16 @@ function onScroll(event){
             currLink.addClass("active");
         }
         else{
+        	console.log();
+        	$('#web0').removeClass("active");
             currLink.removeClass("active");
         }
     });
     $('#web2').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if (refElement.offset().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {  
+        if (refElement.offset().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        	$('#web0').removeClass("active");
             currLink.addClass("active");
         }
         else{
@@ -1143,6 +1147,7 @@ function onScroll(event){
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
         if (refElement.offset().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {  
+        	$('#web0').removeClass("active");
             currLink.addClass("active");
         }
         else{

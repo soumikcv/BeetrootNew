@@ -3387,7 +3387,7 @@
 		background: rgba(248, 248, 248, 1);
 		color: #c0c5c9;
 		cursor: default;
-		height: 4em;
+		height: 4.8em;
 		left: 0;
 		line-height: 3.25em;
 		position: fixed;
@@ -3424,7 +3424,7 @@
 			}
 
 		#logo{
-			height: 58px;
+			height: 70px;
 			padding-left: 40px;
 		}
 
@@ -3450,6 +3450,7 @@
 			}
 
 			#header > .web {
+				transform: translate3d(-30px,10px,10px);
 				height: 50px;
 			}
 			.nav-active{
@@ -3484,9 +3485,7 @@
 			#header > a:last-child {
 				padding-right: 1.25em;
 			}
-			.web{
-				
-			}
+			
 
 			.web.active{
 				background-color: rgba(0,0,0,0.2);
@@ -3499,6 +3498,10 @@
 				#header > a {
 					padding: 0 0.5em;
 					display: inline-block;
+				}
+				#logo{
+					height: 50px;
+					padding-left: 40px;
 				}
 
 					#header > a + a[href="#menu"]:last-child {
@@ -3520,6 +3523,14 @@
 
 		body {
 			padding-top: 44px;
+		}
+		#logo{
+			height: 50px;
+			padding-left: 40px;
+		}
+		#header > .web {
+			transform: translate3d(-30px,-8px,10px);
+			height: 50px;
 		}
 
 		#header {
