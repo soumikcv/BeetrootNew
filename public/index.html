@@ -16,9 +16,9 @@
 			<header id="header">
 				<h1><a href="#"><img id="logo" src="img/Logo.svg"></a></h1>
 				<a id="mobile" href="#menu">Menu</a>
-				<a id="web" class="scrolly" href="#work">Work</a>
-				<a id="web" class="scrolly" href="#service">Services</a>
-				<a id="web" class="scrolly" href="#footer">Contact</a>
+				<a id="web1" class="web scrolly" style="text-align: center;line-height: 36px;" href="#work">Work</a>
+				<a id="web2" class="web scrolly" style="text-align: center;line-height: 36px;" href="#service">Services</a>
+				<a id="web3" class="web scrolly" style="text-align: center;line-height: 36px;" href="#footer">Contact</a>
 			</header>
 
 		<!-- Nav -->
@@ -62,14 +62,13 @@
 
 			<!-- One -->
 				<section class="wrapper style1">
-					<div class="inner">
 						<header class="align-center">
 							<h2>Success story</h2>
 							<p>Beetroot helped STS, an international school to create a communication design strategy which is engaging and effective for both parents and children. Right use of visual story telling is a proven way of conveying ideas in a memorable way.</p>
 						</header>
 						<!-- Demoreel section -->
-							<div class="flex flex-2">
-								<div class="video col" style="margin:0 auto;">
+							<div class="flex flex-2" style="background-color: #efefef;">
+								<div class="video col" style="margin:0 auto;background-color: white;">
 									<div class="image fit">
 										<img src="img/demoreel.png" alt="" />
 										<div class="arrow">
@@ -83,9 +82,11 @@
 								</div>
 								
 							</div>
+					<div class="inner">
+
 							<br><br><br>
 							<h2 class="align-center">Brands worked with us</h2>
-							<div class="clients" style="margin: 0 auto;background-color: white;opacity:0.8;box-shadow: 0px 10px 10px rgba(226,226,226,1);">
+							<div class="clients" style="margin: 0 auto;background-color: white;opacity:0.8;">
 								  <div><img src="img/client/01.png"></div>
 								  <div><img src="img/client/02.png"></div>
 								  <div><img src="img/client/03.png"></div>
@@ -105,13 +106,15 @@
 				</section>
 
 			<!-- Two -->
-				<section class="wrapper style2">
-					<div class="inner">
-						<header id="work" class="align-center">
+				<section id="work" class="wrapper style2">
+				<header  class="align-center">
 							<h2>Case Studies Of Success</h2>
 							<p>Beetroot has helped small to big organizations build and promote their brands, improve the effectiveness of their service, through design and strategy.</p>
 						</header>
 						<!-- Tabbed Video Section -->
+						<img src="img/big_bg3.jpg" style="width: 100%;margin-bottom: 40px;">
+					<div class="inner">
+
 							<div class="flex flex-tabs">
 								<ul class="tab-list">
 									<li><a href="#" data-tab="tab-1" class="active">All Works</a></li>
@@ -888,9 +891,8 @@
 				</section>
 
 			<!-- Three -->
-				<section class="wrapper style1">
-					<div class="inner">
-						<header id="service" class="align-center">
+				<section id="service" class="wrapper style1">
+				<header  class="align-center">
 							<h2>Expertise</h2>
 							<p>Motion Graphics, 
 								Corporate/Explainer Videos,
@@ -904,6 +906,8 @@
 								UX Workshops.
 								</p>
 						</header>
+						<img src="img/homeimage02a.png" style="width: 100%;margin-bottom: 40px;">
+					<div class="inner">
 
 						<!-- Sevices section -->
 							<div class="flex flex-3">
@@ -1086,6 +1090,66 @@
 					        	}
 					    }
 					);
+
+
+				$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#web1').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.offset().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {  
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+    $('#web2').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.offset().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {  
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+    $('#web3').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.offset().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {  
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
 		
 			</script>
 	</body>
