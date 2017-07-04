@@ -2057,18 +2057,15 @@
 		}
 
 		.flex.flex-tabs {
-			-moz-flex-wrap: nowrap;
-			-webkit-flex-wrap: nowrap;
-			-ms-flex-wrap: nowrap;
-			flex-wrap: nowrap;
+
 		}
 
 			.flex.flex-tabs ul {
-				width: 20%;
+				width: 100%;
 			}
 
 			.flex.flex-tabs .tabs {
-				width: 77%;
+				width: 100%;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -2078,11 +2075,11 @@
 			}
 
 			.flex.flex-tabs ul {
-				width: 30%;
+				width: 100%;
 			}
 
 			.flex.flex-tabs .tabs {
-				width: 67%;
+				width: 100%;
 			}
 
 			.flex.flex-tabs .flex-3 .col {
@@ -2673,10 +2670,19 @@
 /* Tab */
 
 	ul.tab-list {
+
+		float:left;position:relative;
 		list-style: none;
 		margin: 0 0 1em 0;
 		padding: 0;
+		width: 100%;
 	}
+	ul.tab-list li{
+		float:left;position:relative;
+		margin-bottom:20px;
+		display: inline-block;
+	}
+
 
 		ul.tab-list li a {
 			background: rgba(255, 255, 255, 0.6);
@@ -2684,9 +2690,8 @@
 			color: rgba(0, 0, 0, 0.8) !important;
 			margin-bottom: .5em;
 			padding: .5em 1em;
-			display: inline-block;
+			display: inline;
 			width: 100%;
-			box-shadow: 1px 3px 10px rgba(0,0,0,.3);
 		}
 
 			ul.tab-list li a.active {
@@ -2803,7 +2808,7 @@
 	.wrapper {
 		padding: 6em 0 4em 0;
 		position: relative;
-		box-shadow: 10px 3px 10px rgba(0,0,0,.5)
+		
 	}
 
 		.wrapper:before {
@@ -2843,7 +2848,7 @@
 		.wrapper.style1 {
 			background-color: rgb(252,252,252);
 			color: black;
-			box-shadow: 5px 10px 10px rgba(0,0,0,.5);
+			
 		}
 
 			.wrapper.style1 input, .wrapper.style1 select, .wrapper.style1 textarea {
@@ -2881,7 +2886,7 @@
 
 			.wrapper.style1 .box {
 				border-color: rgba(0, 0, 0, 0.15);
-				box-shadow: 5px 10px 10px rgba(226,226,226,1);
+				
 
 			}
 
